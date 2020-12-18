@@ -1,0 +1,73 @@
+html{
+ font-family: 'Roboto', sans-serif;
+  color: white;
+  background-repeat: no-repeat ;
+}
+
+#clock{
+  margin-top: 300px;
+  position: absolute;
+  left: 39%;
+  text-align: center;
+  font-size: 40px;
+}
+#sidebar{
+ position: absolute;
+  width: 300px;
+  height: 700px;
+  background: #000;
+  left: -300px;
+  transition: .4s;
+}
+#sidebar.active {
+  left: 0;
+}
+#sidebar .toggle-btn{
+  margin-left: 300px;
+  position: absolute;
+  color: #fff;
+  font-size: 20px;
+  padding: 20px 24px ;
+
+}
+.toggle-btn span{
+width: 30px;
+height: 4px;
+background: #fff;
+display: block;
+margin-top: 4px;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+label{
+  font-size: 20px;
+}
+
+button{
+  margin-top: 10px;
+  margin-left: 90px;
+  color: white;
+  background-color: #000;
+  border-style:ridge;
+  border-radius: 8px;
+  height: 25px;
+  width: 100px;
+}
+
+.radio{
+  padding: 10px;
+}
+
+.radio:hover{
+  color: darkgrey;
+}
+
+.radio:c{
+  color: darkgrey;
+}
+
+

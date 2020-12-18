@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day</title>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+  <div id = 'sidebar'>
+    <div class = 'toggle-btn' onclick="show()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div id = 'form'>
+      <form id = 'settings'>
+        <input type="radio" id="FullDate" name="full" value="yes">
+        <label class="radio"  for="FullDate">Show Full Date</label><br>
+        <br>
+        <input type="radio" id="TimeOnly" name="full" value="TimeOnly">
+        <label class="radio"  for="TimeOnly">Clock Time Only</label><br>
+        <br>
+        <input  type="radio" id="ShowSeconds" name="seconds" value="ShowSeconds">
+        <label class="radio"  class="radio"  for="ShowSeconds">Show Seconds</label><br>
+        <br>
+        <input  type="radio" id="NoSeconds" name="seconds" value="noSeconds">
+        <label class="radio" for="NoSeconds">Do Not Show Seconds</label><br>
+        <br>
+        <button id="submit" type="submit" value="submit">
+          submit
+        </button>
+      </form>
+    </div>
+
+  </div>
+
+  <div id="clock">
+  </div>
+
+  <script src="luxon.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
