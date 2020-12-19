@@ -5,12 +5,21 @@ html{
 }
 
 #clock{
-  margin-top: 300px;
+  margin-top: 18rem;
   position: absolute;
   left: 39%;
   text-align: center;
   font-size: 40px;
 }
+
+#am-pm{
+  margin-top: 15rem;
+  position: absolute;
+  left: 40.5%;
+  text-align: center;
+  font-size: 40px;
+}
+
 #sidebar{
  position: absolute;
   width: 300px;
@@ -71,3 +80,12 @@ button{
 }
 
 
+@media screen and (max-width: 600px) {
+  #am-pm{
+    margin-left: -10rem;
+    margin-top: 10rem;
+  }
+  #clock{
+    margin-left: -10rem;
+  }
+}

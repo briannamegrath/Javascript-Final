@@ -12,20 +12,24 @@ function createClock () {
   const day = now.day
   const month = now.month
   const year = now.year
-  const hour = now.hour
-  const minutes = now.minute
-  const seconds = now.second
+  let hour = now.toLocaleString(DateTime.TIME_SIMPLE)
   let time = '<p>'
   if (settings.showFullDate) {
     time += ` ${day}/${month}/${year}/`
   }
-  time += `${hour}:${minutes}`
   if (settings.showSeconds) {
-    time += `:${seconds}`
+    hour = now.toLocaleString(DateTime.TIME_WITH_SECONDS)
+  }
+  time += `${hour}`
+  if (hour < 12) {
+    document.getElementById('pm').style = 'display:none'
+  }else {
+    document.getElementById('am').style = 'display:none'
   }
   time += '</p>'
   document.getElementById('clock').innerHTML = time
 }
+
 setInterval(() => {
   createClock()
 }, 100)
@@ -62,13 +66,12 @@ function setBackground () {
     .then(response => response.json())
     .then(json => {
       const picture = json.url
-      document.getElementsByTagName("html")[0].style = `height: 100%;background: url('${picture}'); background-repeat: no-repeat; background-size: 100% 100%;`
+      document.getElementsByTagName('html')[0].style = `height: 100%;background: url('${picture}'); background-repeat: no-repeat; background-size: 100% 100%;`
     })
 }
 
-
 setBackground()
 
-function show() {
+function show () {
   document.getElementById('sidebar').classList.toggle('active')
 }
